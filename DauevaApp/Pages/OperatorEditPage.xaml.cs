@@ -51,6 +51,9 @@ namespace DauevaApp.Pages
                     return;
                 }
 
+                string previousStatus = requests.Statuses.Name; // Получаем предыдущий статус
+
+
                 requests.Problem = TxbPoblem.Text;
                 requests.Master_id = Convert.ToInt32(CmbMaster.SelectedValue);
                 requests.Status_id = Convert.ToInt32(CmbStat.SelectedValue);
@@ -58,7 +61,16 @@ namespace DauevaApp.Pages
                 // Вместо AddOrUpdate используйте метод SaveChanges для обновления существующей сущности
                 ConnectionDb.autoTransEntities.SaveChanges();
 
-                MessageBox.Show("Изменения внесены", "Уведомление", MessageBoxButton.OK);
+                string currentStatus = ConnectionDb.autoTransEntities.Statuses.FirstOrDefault(s => s.id == requests.Status_id)?.Name; // Получаем текущий статус
+
+                if (previousStatus != currentStatus)
+                {
+                    MessageBox.Show($"Статус изменен с '{previousStatus}' на '{currentStatus}'", "Уведомление о изменении статуса", MessageBoxButton.OK);
+                }
+                else
+                {
+                    MessageBox.Show("Изменения внесены", "Уведомление", MessageBoxButton.OK);
+                }
 
             }
             catch (Exception ex)

@@ -9,28 +9,45 @@
       Title="OperatorEditPage">
 
     <Grid>
-        <StackPanel>
-            <GroupBox Header="№ Заявки" Margin="5">
-                <TextBlock Name="TxbId"/>
-            </GroupBox>
-            <GroupBox Header="Статус заявки" Margin="5">
-                <ComboBox
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="8*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0">
+            <Button
+                Width="100"
+                Height="20"
+                HorizontalAlignment="Left"
+                Margin="5"
+                Name="fgd"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1">
+            <StackPanel>
+                <GroupBox Header="№ Заявки" Margin="5">
+                    <TextBlock Name="TxbId"/>
+                </GroupBox>
+                <GroupBox Header="Статус заявки" Margin="5">
+                    <ComboBox
                     Name="CmbStat"/>
-            </GroupBox>
-            <GroupBox Header="Описание проблемы" Margin="5">
-                <TextBox
+                </GroupBox>
+                <GroupBox Header="Описание проблемы" Margin="5">
+                    <TextBox
                     Name="TxbPoblem"/>
-            </GroupBox>
-            <GroupBox Header="Мастер" Margin="5">
-                <ComboBox
+                </GroupBox>
+                <GroupBox Header="Мастер" Margin="5">
+                    <ComboBox
                     Name="CmbMaster"/>
-            </GroupBox>
-            <Button Width="100" Height="25"
+                </GroupBox>
+                <Button Width="100" Height="25"
                     Name="BtnSave"
                     Content="Сохранить"
                     Click="BtnSave_Click" 
                     HorizontalAlignment="Left" Margin="5"/>
+            </StackPanel>
+
+
         </StackPanel>
-        
     </Grid>
 </Page>
