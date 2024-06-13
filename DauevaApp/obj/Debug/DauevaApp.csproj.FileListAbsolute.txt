@@ -29,3 +29,5 @@ C:\Users\aye22\source\repos\DauevaApp\DauevaApp\obj\Debug\Pages\OperatorEditPage
 C:\Users\aye22\source\repos\DauevaApp\DauevaApp\obj\Debug\Pages\OperatorEditPage.baml
 C:\Users\aye22\source\repos\DauevaApp\DauevaApp\obj\Debug\Pages\ClientPage.g.cs
 C:\Users\aye22\source\repos\DauevaApp\DauevaApp\obj\Debug\Pages\ClientPage.baml
+C:\Users\aye22\source\repos\DauevaApp\DauevaApp\obj\Debug\Pages\AddPage.g.cs
+C:\Users\aye22\source\repos\DauevaApp\DauevaApp\obj\Debug\Pages\AddPage.baml

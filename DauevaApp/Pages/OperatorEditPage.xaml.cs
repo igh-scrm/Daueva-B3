@@ -35,7 +35,7 @@ namespace DauevaApp.Pages
 
             CmbMaster.DisplayMemberPath = "Name";
             CmbMaster.SelectedValuePath = "id";
-            CmbMaster.ItemsSource = ConnectionDb.autoTransEntities.Users.ToList();
+            CmbMaster.ItemsSource = ConnectionDb.autoTransEntities.Users.Where(x => x.UserType_id ==2).ToList();
             CmbMaster.SelectedItem = requests.Master; // Устанавливаем выбранный объект master
         }
 

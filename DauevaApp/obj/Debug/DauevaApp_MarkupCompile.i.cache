@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\aye22\source\repos\DauevaApp\DauevaApp\App.xaml
-51837947457
+6974465335
 2-415819401
-21-1796401316
+22-1413700822
 18560799977
-MainWindow.xaml;Pages\Auth.xaml;Pages\ClientPage.xaml;Pages\OperatorEditPage.xaml;Pages\OperatorPage.xaml;
+MainWindow.xaml;Pages\AddPage.xaml;Pages\Auth.xaml;Pages\ClientPage.xaml;Pages\OperatorEditPage.xaml;Pages\OperatorPage.xaml;
 
 True
 

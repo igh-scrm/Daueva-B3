@@ -43,7 +43,7 @@ namespace DauevaApp.Pages
 
                     switch (data.UserType_id)
                     {
-                        case 1: NavigateClass.frmNav.Navigate(new OperatorPage());
+                        case 3: NavigateClass.frmNav.Navigate(new OperatorPage());
                             break;
                         case 4: NavigateClass.frmNav.Navigate(new ClientPage(data));
                             break;

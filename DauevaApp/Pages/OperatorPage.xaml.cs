@@ -32,5 +32,10 @@ namespace DauevaApp.Pages
         {
             NavigateClass.frmNav.Navigate(new OperatorEditPage((sender as Button).DataContext as Requests));
         }
+
+        private void BntAdd_Click(object sender, RoutedEventArgs e)
+        {
+            NavigateClass.frmNav.Navigate(new AddPage());
+        }
     }
 }
