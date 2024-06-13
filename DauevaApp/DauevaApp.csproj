@@ -64,27 +64,28 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AutoTrans.cs">
+    <Compile Include="Model\AutoTrans.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AutoTrans.tt</DependentUpon>
     </Compile>
-    <Compile Include="CarType.cs">
+    <Compile Include="Model\CarType.cs">
       <DependentUpon>AutoTrans.tt</DependentUpon>
     </Compile>
-    <Compile Include="Comments.cs">
+    <Compile Include="Model\Comments.cs">
       <DependentUpon>AutoTrans.tt</DependentUpon>
     </Compile>
-    <Compile Include="Requests.cs">
+    <Compile Include="Model\ConnectionDb.cs" />
+    <Compile Include="Model\Requests.cs">
       <DependentUpon>AutoTrans.tt</DependentUpon>
     </Compile>
-    <Compile Include="Statuses.cs">
+    <Compile Include="Model\Statuses.cs">
       <DependentUpon>AutoTrans.tt</DependentUpon>
     </Compile>
-    <Compile Include="Users.cs">
+    <Compile Include="Model\Users.cs">
       <DependentUpon>AutoTrans.tt</DependentUpon>
     </Compile>
-    <Compile Include="UserType.cs">
+    <Compile Include="Model\UserType.cs">
       <DependentUpon>AutoTrans.tt</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
@@ -95,12 +96,12 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="AutoTrans.Context.cs">
+    <Compile Include="Model\AutoTrans.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AutoTrans.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="AutoTrans.Designer.cs">
+    <Compile Include="Model\AutoTrans.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AutoTrans.edmx</DependentUpon>
@@ -109,8 +110,37 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\Auth.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ClientPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\OperatorEditPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\OperatorPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NavigateClass.cs" />
+    <Compile Include="Pages\Auth.xaml.cs">
+      <DependentUpon>Auth.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ClientPage.xaml.cs">
+      <DependentUpon>ClientPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OperatorEditPage.xaml.cs">
+      <DependentUpon>OperatorEditPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OperatorPage.xaml.cs">
+      <DependentUpon>OperatorPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -128,11 +158,11 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="AutoTrans.edmx">
+    <EntityDeploy Include="Model\AutoTrans.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>AutoTrans.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="AutoTrans.edmx.diagram">
+    <None Include="Model\AutoTrans.edmx.diagram">
       <DependentUpon>AutoTrans.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
@@ -145,12 +175,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AutoTrans.Context.tt">
+    <Content Include="Model\AutoTrans.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>AutoTrans.Context.cs</LastGenOutput>
       <DependentUpon>AutoTrans.edmx</DependentUpon>
     </Content>
-    <Content Include="AutoTrans.tt">
+    <Content Include="Model\AutoTrans.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>AutoTrans.edmx</DependentUpon>
       <LastGenOutput>AutoTrans.cs</LastGenOutput>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6aaf0fe54507477f92870c8b5d909ce2" Name="Diagram1">
+        <EntityTypeShape EntityType="AutoTransModel.CarType" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AutoTransModel.Comments" Width="1.5" PointX="5.25" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AutoTransModel.Requests" Width="1.5" PointX="8.25" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AutoTransModel.Statuses" Width="1.5" PointX="6" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AutoTransModel.Users" Width="1.5" PointX="3" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="AutoTransModel.UserType" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <AssociationConnector Association="AutoTransModel.FK_Requests_CarType" ManuallyRouted="false" />
+        <AssociationConnector Association="AutoTransModel.FK_Comments_Requests" ManuallyRouted="false" />
+        <AssociationConnector Association="AutoTransModel.FK_Comments_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="AutoTransModel.FK_Requests_Statuses" ManuallyRouted="false" />
+        <AssociationConnector Association="AutoTransModel.FK_Requests_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="AutoTransModel.FK_Requests_Users1" ManuallyRouted="false" />
+        <AssociationConnector Association="AutoTransModel.FK_Users_UserType" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

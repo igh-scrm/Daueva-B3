@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DauevaApp.Model;
+using DauevaApp.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,13 @@ namespace DauevaApp
         public MainWindow()
         {
             InitializeComponent();
+
+            NavigateClass.frmNav = FrmMain;
+            FrmMain.Navigate(new Auth());
+
+
+
+            ConnectionDb.autoTransEntities = new AutoTransEntities();
         }
     }
 }
